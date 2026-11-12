@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 
 import PyInstaller.__main__ as pyinstaller
 
@@ -9,7 +10,7 @@ DATA = (["PIRATE_ICON.ico", "PIRATE_ICON.png", "PIRATE_ICON_BLACK.ico", "PIRATE_
          "PIRATE_ICON_WHITE.ico", "PIRATE_ICON_WHITE.png", "Sound Stop.wav"]
         + [f"Sound {i}.wav" for i in range(1, 10)])
 
-missing = [f for f in ["PIRATE_TOKEN_BOT.py"] + DATA if not os.path.exists(f)]
+missing = [f for f in ["PIRATE_TOKEN_BOT.py", "bot_config.json"] + DATA if not os.path.exists(f)]
 if missing:
     print("ERROR: missing files:", ", ".join(missing))
     sys.exit(1)
@@ -22,3 +23,8 @@ for f in DATA:
     args += ["--add-data", f + os.pathsep + "."]
 
 pyinstaller.run(args)
+
+# Keep the editable config beside the one-file EXE.
+os.makedirs("dist", exist_ok=True)
+shutil.copy2("bot_config.json", os.path.join("dist", "bot_config.json"))
+print("Build complete: dist contains the EXE and bot_config.json")
