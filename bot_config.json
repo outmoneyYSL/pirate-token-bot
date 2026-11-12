@@ -1,0 +1,76 @@
+{
+  "match_min": 6,
+  "lobby_sec": 15,
+  "hotkey": "F8",
+  "theme": "Purple",
+  "language": "Русский",
+  "sound": "Sound 1",
+  "sound_enabled": true,
+  "play": [
+    313,
+    892
+  ],
+  "leave": [
+    1696,
+    74
+  ],
+  "confirm": [
+    1603,
+    187
+  ],
+  "rmb": [
+    100,
+    980
+  ],
+  "ab_enabled": true,
+  "ab_keys": {
+    "w": true,
+    "a": true,
+    "s": true,
+    "d": true,
+    "shift": true,
+    "space": true,
+    "lmb": true,
+    "mouse": true,
+    "custom": false
+  },
+  "ab_custom_key": "с",
+  "ab_pmin": 0.3,
+  "ab_pmax": 2,
+  "ab_amax": 2.5,
+  "ab_delay": 40,
+  "ab_pixel_on": true,
+  "ab_pixel": [
+    1888,
+    39,
+    "#f7f7f7"
+  ],
+  "td_enabled": true,
+  "td_slots": [
+    [
+      1412,
+      531,
+      "#fff618"
+    ],
+    [
+      1378,
+      545,
+      "#fff618"
+    ],
+    [
+      1391,
+      541,
+      "#fff618"
+    ],
+    [
+      1724,
+      544,
+      "#fff618"
+    ]
+  ],
+  "td_popup": [
+    1725,
+    539,
+    "#fff618"
+  ]
+}
